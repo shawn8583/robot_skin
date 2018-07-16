@@ -2,8 +2,9 @@
 #
 # Publish ADC data over ROS.
 #
-# One example of visualizing the data:
-# rxplot /arduino/ADC/data[0] -b 15 -r100 -p5
+# Visualize data of a 2D form in rqt_plot( in this case a 12 tectile pixels array made for M):
+# $ rqt_plot /arduino/ADC/data[0] /arduino/ADC/data[1] /arduino/ADC/data[2] /arduino/ADC/data[3] /arduino/ADC/data[4] /arduino/ADC/data[5] /arduino/ADC/data[6] /arduino/ADC/data[7] /arduino/ADC/data[8]#  /arduino/ADC/data[9] /arduino/ADC/data[10] /arduino/ADC/data[11]
+#
 #
 #
 
