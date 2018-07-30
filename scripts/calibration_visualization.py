@@ -16,7 +16,7 @@ p10_value = [815,480,365,270,255,223,221]
 p11_value = [455,230,212,200,180,170,163]
 p12_value = [856,445,370,271,235,192,181]
 
-
+# plot data line chart
 plt.figure('Draw')
 plt.title('Calibration')
 plt.plot(newton, p1_value, marker='x', label='id_1')
@@ -38,8 +38,11 @@ plt.ylabel('values')
 plt.show()
 
 
+# saved one picture by this code named "data_line_chart.pdf" under robot_skin dir
+#
 # *************************************************************************
-# NOTE: One way of doing Curve Fitting in MATLAB(id_1 for eample):
+# NOTE: One way of doing Curve Fitting in MATLAB (use id_1 for eample):
+# ref: https://blog.csdn.net/it_beecoder/article/details/78779385
 # *************************************************************************
 # >> x0 = [0,1,2,3,4,5,6];
 # >> p1_value = [936,520,380,333,264,249,238];
@@ -57,7 +60,7 @@ plt.show()
 # - (7280819397581895*x^5)/9007199254740992 + (8491161797437655*x^4)/56294995# 3421312 - (7561707968091103*x^3)/70368744177664 + (3286073751546417*x^2)/87# 96093022208 - (10496*x)/15 + 19666/21
 # 
 #
-## Do this process with other ids as well and well get 12 funcions.
+## Do this process with other ids as well and will get 12 funcions.
 
 
 
