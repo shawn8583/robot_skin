@@ -76,8 +76,8 @@ plt.show()
 
 
 
-# reference: https://blog.csdn.net/zjjtilm/article/details/79106348
-# saved one picture by this code  named "fitting_fucntions_figure.pdf" under robot_skin dir
+# Reference: https://blog.csdn.net/zjjtilm/article/details/79106348
+# Saved one picture by this code  named "fitting_fucntions_figure_newton_as_x.pdf" under robot_skin dir
 #
 #
 #

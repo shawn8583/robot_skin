@@ -18,18 +18,18 @@ x12_for_scatter = [856,445,370,271,235,192,181]
 
 y_for_scatter = [0,1,2,3,4,5,6]
 
-plt.scatter(x1_for_scatter,y_for_scatter)
-plt.scatter(x2_for_scatter,y_for_scatter)
-plt.scatter(x3_for_scatter,y_for_scatter)
-plt.scatter(x4_for_scatter,y_for_scatter)
-plt.scatter(x5_for_scatter,y_for_scatter)
-plt.scatter(x6_for_scatter,y_for_scatter)
-plt.scatter(x7_for_scatter,y_for_scatter)
-plt.scatter(x8_for_scatter,y_for_scatter)
-plt.scatter(x9_for_scatter,y_for_scatter)
-plt.scatter(x10_for_scatter,y_for_scatter)
-plt.scatter(x11_for_scatter,y_for_scatter)
-plt.scatter(x12_for_scatter,y_for_scatter)
+plt.scatter(x1_for_scatter,y_for_scatter, c='darkcyan', edgecolors='darkcyan')
+plt.scatter(x2_for_scatter,y_for_scatter, c='dodgerblue', edgecolors='dodgerblue')
+plt.scatter(x3_for_scatter,y_for_scatter, c='springgreen', edgecolors='springgreen')
+plt.scatter(x4_for_scatter,y_for_scatter, c='black', edgecolors='black')
+plt.scatter(x5_for_scatter,y_for_scatter, c='fuchsia', edgecolors='fuchsia')
+plt.scatter(x6_for_scatter,y_for_scatter, c='olive', edgecolors='olive')
+plt.scatter(x7_for_scatter,y_for_scatter, c='yellow', edgecolors='yellow')
+plt.scatter(x8_for_scatter,y_for_scatter, c='turquoise', edgecolors='turquoise')
+plt.scatter(x9_for_scatter,y_for_scatter, c='red', edgecolors='red')
+plt.scatter(x10_for_scatter,y_for_scatter, c='darkgray', edgecolors='darkgray')
+plt.scatter(x11_for_scatter,y_for_scatter, c='deepskyblue', edgecolors='deepskyblue')
+plt.scatter(x12_for_scatter,y_for_scatter, c='maroon', edgecolors='maroon')
 
 
 # plot functions
@@ -83,19 +83,19 @@ def y12(x):
     y12 = (4888)*x**(-1.267) + (-0.9634)
     return y12
 
+plt.plot(x, y1(x), linewidth=1, label='id_1', color='darkcyan')
+plt.plot(x, y2(x), linewidth=1, label='id_2', color='dodgerblue')
+plt.plot(x, y3(x), linewidth=1, label='id_3', color='springgreen')
+plt.plot(x, y4(x), linewidth=1, label='id_4', color='black')
+plt.plot(x, y5(x), linewidth=1, label='id_5', color='fuchsia')
+plt.plot(x, y6(x), linewidth=1, label='id_6', color='olive')
+plt.plot(x, y7(x), linewidth=1, label='id_7', color='yellow')
+plt.plot(x, y8(x), linewidth=1, label='id_8', color='turquoise')
+plt.plot(x, y9(x), linewidth=1, label='id_9', color='red')
+plt.plot(x, y10(x), linewidth=1, label='id_10', color='darkgray')
+plt.plot(x, y11(x), linewidth=1, label='id_11', color='deepskyblue')
+plt.plot(x, y12(x), linewidth=1, label='id_12', color='maroon')
 
-plt.plot(x, y1(x), linewidth=1,  label='id_1')
-plt.plot(x, y2(x), linewidth=1,  label='id_2')
-plt.plot(x, y3(x), linewidth=1,  label='id_3')
-plt.plot(x, y4(x), linewidth=1,  label='id_4')
-plt.plot(x, y5(x), linewidth=1,  label='id_5')
-plt.plot(x, y6(x), linewidth=1,  label='id_6')
-plt.plot(x, y7(x), linewidth=1,  label='id_7')
-plt.plot(x, y8(x), linewidth=1,  label='id_8')
-plt.plot(x, y9(x), linewidth=1,  label='id_9')
-plt.plot(x, y10(x), linewidth=1,  label='id_10')
-plt.plot(x, y11(x), linewidth=1,  label='id_11')
-plt.plot(x, y12(x), linewidth=1,  label='id_12')
 plt.legend()
 plt.show()
 
@@ -109,3 +109,6 @@ plt.show()
 # ******REFERENCES*******
 # For plotting scatter plots, reference: https://www.cnblogs.com/sunshinewang/p/6853813.html
 # For plotting functions, reference: https://blog.csdn.net/zjjtilm/article/details/79106348
+#
+#
+# Saved one picture by this code  named "fitting_fucntions_figure_newton_as_y" under robot_skin dir
