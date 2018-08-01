@@ -70,7 +70,7 @@ def callback(data):
     n10 = y1(data.data[9])
     n11 = y1(data.data[10])
     n12 = y1(data.data[11])
-    print("[", n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, "]")
+    print(n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12)
 
 def listener():
     rospy.init_node('listener', anonymous=True)
@@ -85,3 +85,4 @@ if __name__ == '__main__':
 
 # Reference: https://www.ncnynl.com/archives/201611/1059.html
 #            http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber(python)
+#            https://cloud.tencent.com/developer/ask/31510  # summary of printing multiple stuff in python
