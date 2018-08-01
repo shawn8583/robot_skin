@@ -3,14 +3,13 @@
 # Publish ADC data over ROS.
 #
 # Visualize data of a 2D form in rqt_plot( in this case a 12 tectile pixels array made for M):
-# $ rqt_plot /arduino/ADC/data[0] /arduino/ADC/data[1] /arduino/ADC/data[2] /arduino/ADC/data[3] /arduino/ADC/data[4] /arduino/ADC/data[5] /arduino/ADC/data[6] /arduino/ADC/data[7] /arduino/ADC/data[8]#  /arduino/ADC/data[9] /arduino/ADC/data[10] /arduino/ADC/data[11]
+# $ rqt_plot /arduino/ADC/data[0] /arduino/ADC/data[1] /arduino/ADC/data[2] /arduino/ADC/data[3] /arduino/ADC/data[4] /arduino/ADC/data[5] /arduino/ADC/data[6] /arduino/ADC/data[7] /arduino/ADC/data[8] /arduino/ADC/data[9] /arduino/ADC/data[10] /arduino/ADC/data[11]
 #
 #
 #
 
 
 import serial
-
 import roslib; roslib.load_manifest('robot_skin')
 import rospy
 from robot_skin.msg import FloatArray
@@ -52,8 +51,8 @@ if __name__ == '__main__':
 
     serial_dev = setup_serial(dev_name, baudrate)
 
-    pub = rospy.Publisher('/arduino/ADC', FloatArray)
-    rospy.init_node('adc_publisher_node')
+    pub = rospy.Publisher('/arduino/ADC', FloatArray)  # publishing to the '/arduino/ADC' topic using the message type FloatArray
+    rospy.init_node('adc_publisher_node')  # tells rospy the name of the node
 
     for i in range(10):
         ln = serial_dev.readline()
@@ -61,11 +60,14 @@ if __name__ == '__main__':
     rospy.loginfo('Started publishing ADC data')
 
     while not rospy.is_shutdown():
-        fa = FloatArray()
+        fa = FloatArray()  # pass in no arguments and initialize the field directly, also the general rule of thumb is that constructor args are in the same order as in the FloatArray.msg file.
         fa.header.stamp = rospy.Time.now()
         fa.data = get_adc_data(serial_dev, 16)
         pub.publish(fa)
 
     serial_dev.close()
+
+
+# Reference: http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber(python)
 
 
