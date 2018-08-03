@@ -1,0 +1,6 @@
+*提取bag文件中的数据并保存为csv格式:
+
+对于非图片数据，大部分情况下都可用csv文件存储。从section 5中我们就可以指导用rostopic echo即可打印topic中的数据:
+
+$ rostopic echo -b <BAGFILE> -p <TOPIC> > <output>.csv 
+# <BAGFILE>是bag文件，<TOPIC>为数据所在的topic
